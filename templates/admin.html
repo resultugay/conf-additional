@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block navbar %}
+{% if not current_user.is_authenticated %}
+
+ <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-right">
+       <!-- 
+       
+       
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        
+        
+         -->
+		<a href = "{{ url_for('sign_in.sign_in_page') }}" class="btn btn-default">Sign In</a>
+		        Or
+		<a href = "{{ url_for('sign_up.sign_up_page') }}" class="btn btn-default">Sign Up</a>
+      </form>
+{% endif %}
+{% if current_user.is_authenticated %}
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<form class="navbar-form navbar-right">
+        		  Hi {{ current_user.name }}!
+	<a href = "{{ url_for('log_out.log_out_page') }}" class="btn btn-default" >Log Out</a>
+    </form>
+{% endif %}
+    </div><!-- /.navbar-collapse -->
+    
+{% endblock %}	
+
+{% block head %}
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-bottom:20px;
+}
+
+td, th {
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+tr:hover {background-color: #96807A;}
+
+td > a:link {
+    color: black;
+}
+td > a:visited {
+    color: #4d4d00;
+}
+td > a:active {
+    color: yellow;
+} 
+
+
+.foo {
+  float: left;
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.blue {
+  background: #00B050;
+}
+
+.purple {
+  background: #00B0F0;
+}
+
+.wine {
+  background: #A9D08E;
+}
+
+.white {
+  background: #fff;
+}
+
+</style>
+
+{% endblock %}	
+
+
+{% block content %}
+  {% if abstracts %}
+<form role = "form" action ="" name = "decision_form" id = "decision_form" method = "POST">
+<div style="text-align:center; ">  
+	<button type="submit" >Save Your Decisions</button>
+</div>  
+<div style=" 
+    margin-left:15%;">  
+	Total Number of Paper is : {{total_number_of_papers}}	
+</div>  
+<div class="foo blue" style="     font-family: arial, sans-serif;
+    margin-left:15%;
+    margin-bottom:20px;
+    
+    "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oral&nbspAccepted</div>
+<div class="foo purple" style="     font-family: arial, sans-serif;
+    margin-left:15%;
+    margin-bottom:20px;
+    
+    "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poster&nbspAccepted</div>
+<div class="foo wine" style="     font-family: arial, sans-serif;
+    margin-left:15%;
+    margin-bottom:20px;
+    
+    "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oral&nbsp;&nbsp;or&nbsp;&nbsp;Poster&nbsp;Accepted</div>
+<div class="foo white" style="     font-family: arial, sans-serif;
+    margin-left:15%;
+    margin-bottom:20px;
+    
+    "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;&nbsp;Progress</div>
+
+<br>
+<table>
+  <tr>
+    <th rowspan="2">Abs Id</th>
+    <th rowspan="2">Paper Name</th>
+    <th  colspan="3" style="text-align:center; border-style: solid;
+    border-width: 1px 1px 1px 3px;" >Your Decision</th>
+  </tr>
+    <tr>
+    <th style="background-color: white; text-align:center; border-style: solid;
+    border-width: 1px 1px 1px 3px;">Accept</th>
+    <th style="background-color: white">Poster</th>
+    <th style="background-color: white">Reject</th>
+   
+  </tr>
+    {% for abstract in abstracts %}
+      <tr>
+         <td>{{abstract.abstract_id}}</td>
+    	 <td bgcolor= {% if abstract.color %} {{abstract.color}} {% else %} "#fff" {% endif %}><a  href="{{  url_for('home.paper_page', abs = abstract.abstract_id)}}" title={{abstract.keywords}}>{{abstract.title}}</a></td>
+		 <td>{{all_accept[loop.index0].total}}</td>
+		 <td>{{all_poster[loop.index0].total}}</td>
+		 <td>{{all_reject[loop.index0].total}}</td>
+      </tr>
+    {% endfor %}
+</table>
+</form>
+ {% endif %}
+{% endblock %}	
