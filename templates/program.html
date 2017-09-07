@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>SESSIONS</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      /* VARS
+   ====================================================== */
+/* LOOP FOR COLORING SECTIONS
+   ================================================================== */
+#section1 {
+  background-color: #F6E3CE;
+}
+#section2 {
+  background-color: #F6E3CE;
+}
+#section3 {
+  background-color: #FFA000;
+}
+#section4 {
+  background-color: #5677fc;
+}
+/* MIXINS
+   ================================================================== */
+/* KEYFRAMES
+   ================================================================== */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes float-in-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-200px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes float-in-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-200px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes float-in-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(200px, 0, 0);
+    transform: translate3d(200px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes float-in-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(200px, 0, 0);
+    transform: translate3d(200px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* BASE
+   ================================================================= */
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 2.35;
+  color: rgba(0, 0, 0, 0.85);
+  margin: 0;
+}
+p {
+  padding-top: 3em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* DYNAMIC NAVIGATION BAR
+   ================================================================= */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #F6E3CE;
+  -webkit-transition: all 650ms cubic-bezier(0.22, 1, 0.25, 1);
+  transition: all 650ms cubic-bezier(0.22, 1, 0.25, 1);
+}
+nav:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.27);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+nav ul {
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  text-transform: uppercase;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  padding: 1.35em 0;
+  margin-right: 3em;
+  font-size: 0.9em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9em;
+}
+/* CONTENT
+   ================================================================== */
+section {
+  height: 400vh;
+}
+section h1,
+section h2 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 8em;
+  -webkit-animation: float-in-right 0.45s ease;
+  animation: float-in-right 0.45s ease;
+}
+.intro {
+  -webkit-animation: float-in-left 0.45s ease;
+  animation: float-in-left 0.45s ease;
+}
+
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align:center;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <body>
+  <nav id="nav">
+    <ul>
+      <li><a href="#section1" >1.Gün</a></li>
+      <li><a href="#section2" >2.Gün</a></li>
+    </ul>
+  </nav>
+
+  <section  id="section1" >
+<br><br>
+<table style="width:90%; margin-left:5%;margin-right:5%;margin-top:1%;table-layout:fixed;">
+  <tr>
+    <th></th>
+    <th>1.Salon</th>
+    <th>2.Salon</th>
+    <th>3.Salon</th>
+    <th>4.Salon</th> 
+    <th>5.Salon</th>
+    <th>6.Salon</th> 
+    <th>7.Salon</th>
+    <th>8.Salon</th> 
+  </tr>
+  <tr>
+  	  <td rowspan="5" style="word-wrap: break-word;width:11px;">15:30 - 16:00</td>
+  </tr>
+   
+	  {% for a in range(0,4) %}
+      <tr>
+		<td>{% if bir|length > a %} <a  href="{{  url_for('home.paper_page', abs = bir[a].abstract_id)}}">{{bir[a].title}}</a> <br> TOPIC : {{bir[a].topic}}</}} {% else %} NULL  {% endif %}</td>
+		<td >{% if iki|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki[a].abstract_id)}}">{{iki[a].title}}</a> <br> TOPIC : {{iki[a].topic}}</}} {% else %} NULL {% endif %}</td>		
+		<td>{% if uc|length > a %}  <a  href="{{  url_for('home.paper_page', abs = uc[a].abstract_id)}}">{{uc[a].title}}</a>  <br> TOPIC : {{uc[a].topic}}</}} {% else %}NULL  {% endif %}</td>
+		<td>{% if dort|length > a %}  <a  href="{{  url_for('home.paper_page', abs = dort[a].abstract_id)}}">{{dort[a].title}}</a> <br> TOPIC : {{dort[a].topic}}</}} {% else %} NULL {% endif %}</td>
+		<td>{% if bes|length > a %}  <a  href="{{  url_for('home.paper_page', abs = bes[a].abstract_id)}}">{{bes[a].title}}</a>  <br> TOPIC : {{bes[a].topic}}</}} {% else %} NULL {% endif %}</td>
+		<td>{% if alti|length > a %}  <a  href="{{  url_for('home.paper_page', abs = alti[a].abstract_id)}}">{{alti[a].title}}</a><br> TOPIC : {{alti[a].topic}}</}} {% else %} NULL{% endif %}</td>
+		<td>{% if yedi|length > a %}  <a  href="{{  url_for('home.paper_page', abs = yedi[a].abstract_id)}}">{{yedi[a].title}} </a><br> TOPIC : {{yedi[a].topic}}</}} {% else %} NULL {% endif %}</td>
+		<td>{% if sekiz|length > a %}  <a  href="{{  url_for('home.paper_page', abs = sekiz[a].abstract_id)}}">{{sekiz[a].title}} </a><br> TOPIC : {{sekiz[a].topic}}</}} {% else %} NULL  {% endif %}</td>		
+	  </tr>
+      {% endfor %}   
+     
+</table>
+
+  </section>
+
+  <section  id="section2" >
+ <br><br>
+<table style="width:90%; margin-left:5%;margin-right:5%;margin-top:1%;table-layout:fixed;">
+  <tr>
+    <th></th>
+    <th>1.Salon</th>
+    <th>2.Salon</th>
+    <th>3.Salon</th>
+    <th>4.Salon</th> 
+    <th>5.Salon</th>
+    <th>6.Salon</th> 
+    <th>7.Salon</th>
+    <th>8.Salon</th> 
+  </tr>
+  
+  
+  <tr>
+  	  <td rowspan="5" style="word-wrap: break-word;width:11px;">09:00 - 10:30</td>
+  </tr>
+  
+	  {% for a in range(0,4) %}
+      <tr>
+		<td>{% if iki_bir_bir|length > a %} <a  href="{{  url_for('home.paper_page', abs = iki_bir_bir[a].abstract_id)}}">{{iki_bir_bir[a].title}}</a> <br> TOPIC : {{iki_bir_bir[a].topic}}</}}{% else %} NULL  {% endif %}</td>
+		<td>{% if iki_bir_iki|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_iki[a].abstract_id)}}">{{iki_bir_iki[a].title}}</a> <br> TOPIC : {{iki_bir_iki[a].topic}}</}}{% else %} NULL {% endif %}</td>		
+		<td>{% if iki_bir_uc|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_uc[a].abstract_id)}}">{{iki_bir_uc[a].title}}</a>  <br> TOPIC : {{iki_bir_uc[a].topic}}</}}{% else %}NULL  {% endif %}</td>
+		<td>{% if iki_bir_dort|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_dort[a].abstract_id)}}">{{iki_bir_dort[a].title}}</a> <br> TOPIC : {{iki_bir_dort[a].topic}}</}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_bir_bes|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_bes[a].abstract_id)}}">{{iki_bir_bes[a].title}}</a>  <br> TOPIC : {{iki_bir_bes[a].topic}}</}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_bir_alti|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_alti[a].abstract_id)}}">{{iki_bir_alti[a].title}}</a> <br> TOPIC : {{iki_bir_alti[a].topic}}</}}{% else %} NULL{% endif %}</td>
+		<td>{% if iki_bir_yedi|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_yedi[a].abstract_id)}}">{{iki_bir_yedi[a].title}} </a><br> TOPIC : {{iki_bir_yedi[a].topic}}</}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_bir_sekiz|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_bir_sekiz[a].abstract_id)}}">{{iki_bir_sekiz[a].title}} </a><br> TOPIC : {{iki_bir_sekiz[a].topic}}</}}{% else %} NULL  {% endif %}</td>		
+	  </tr>
+      {% endfor %} 
+
+	
+
+   <tr>
+  	  <td rowspan="5" style="word-wrap: break-word;width:11px;">11:00 - 12:30</td>
+  </tr>
+  
+	  {% for a in range(0,4) %}
+      <tr>
+		<td>{% if iki_iki_bir|length > a %} <a  href="{{  url_for('home.paper_page', abs = iki_iki_bir[a].abstract_id)}}">{{iki_iki_bir[a].title}}</a> <br> TOPIC : {{iki_iki_bir[a].topic}}{% else %} NULL  {% endif %}</td>
+		<td>{% if iki_iki_iki|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_iki[a].abstract_id)}}">{{iki_iki_iki[a].title}}</a> <br> TOPIC : {{iki_iki_iki[a].topic}}{% else %} NULL {% endif %}</td>		
+		<td>{% if iki_iki_uc|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_uc[a].abstract_id)}}">{{iki_iki_uc[a].title}}</a>  <br> TOPIC : {{iki_iki_uc[a].topic}}{% else %}NULL  {% endif %}</td>
+		<td>{% if iki_iki_dort|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_dort[a].abstract_id)}}">{{iki_iki_dort[a].title}}</a> <br> TOPIC : {{iki_iki_dort[a].topic}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_iki_bes|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_bes[a].abstract_id)}}">{{iki_iki_bes[a].title}}</a>  <br> TOPIC : {{iki_iki_bes[a].topic}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_iki_alti|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_alti[a].abstract_id)}}">{{iki_iki_alti[a].title}}</a> <br> TOPIC : {{iki_iki_alti[a].topic}}{% else %} NULL{% endif %}</td>
+		<td>{% if iki_iki_yedi|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_yedi[a].abstract_id)}}">{{iki_iki_yedi[a].title}} </a><br> TOPIC : {{iki_iki_yedi[a].topic}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_iki_sekiz|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_iki_sekiz[a].abstract_id)}}">{{iki_iki_sekiz[a].title}} </a><br> TOPIC : {{iki_iki_sekiz[a].topic}}{% else %} NULL  {% endif %}</td>		
+	  </tr>
+      {% endfor %} 
+
+  <tr>
+  	  <td rowspan="5" style="word-wrap: break-word;width:11px;">14:00 - 16:00</td>
+  </tr>
+  
+	  {% for a in range(0,4) %}
+      <tr>
+		<td>{% if iki_uc_bir|length > a %} <a  href="{{  url_for('home.paper_page', abs = iki_uc_bir[a].abstract_id)}}">{{iki_uc_bir[a].title}}</a>  </a><br> TOPIC : {{iki_uc_bir[a].topic}}{% else %} NULL  {% endif %}</td>
+		<td>{% if iki_uc_iki|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_iki[a].abstract_id)}}">{{iki_uc_iki[a].title}}</a>  </a><br> TOPIC : {{iki_uc_iki[a].topic}}{% else %} NULL {% endif %}</td>		
+		<td>{% if iki_uc_uc|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_uc[a].abstract_id)}}">{{iki_uc_uc[a].title}}</a>  </a><br> TOPIC : {{iki_uc_uc[a].topic}} {% else %}NULL  {% endif %}</td>
+		<td>{% if iki_uc_dort|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_dort[a].abstract_id)}}">{{iki_uc_dort[a].title}}</a>  </a><br> TOPIC : {{iki_uc_dort[a].topic}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_uc_bes|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_bes[a].abstract_id)}}">{{iki_uc_bes[a].title}}</a>   </a><br> TOPIC : {{iki_uc_bes[a].topic}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_uc_alti|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_alti[a].abstract_id)}}">{{iki_uc_alti[a].title}}</a>  </a><br> TOPIC : {{iki_uc_alti[a].topic}}{% else %} NULL{% endif %}</td>
+		<td>{% if iki_uc_yedi|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_yedi[a].abstract_id)}}">{{iki_uc_yedi[a].title}} </a>  </a><br> TOPIC : {{iki_uc_yedi[a].topic}}{% else %} NULL {% endif %}</td>
+		<td>{% if iki_uc_sekiz|length > a %}  <a  href="{{  url_for('home.paper_page', abs = iki_uc_sekiz[a].abstract_id)}}">{{iki_uc_sekiz[a].title}} </a>  </a><br> TOPIC : {{iki_uc_sekiz[a].topic}}{% else %} NULL  {% endif %}</td>		
+	  </tr>
+      {% endfor %} 
+	  
+     
+</table>
+  </section>
+
+  <section id="section3" >
+  <br><br>
+
+  </section>
+
+  <section  id="section4" >
+ 
+  </section>
+
+    </body>
+</html>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+	$(document).ready(function () {
+	var sections      = $('section');
+	var navbar        =	$('#nav');
+	var navbarHeight  = navbar.height();
+
+	var sectionOffset = [];
+
+	sections.each(function() {
+		var section = $(this);
+
+        var position = section.offset().top - navbarHeight;
+        var backgroundColor = section.css("background-color");
+
+        sectionOffset.push({'postion': position,'color': backgroundColor});
+       
+    });
+
+	$(window).on('scroll', function(){
+		var scrollPos = $(document).scrollTop();
+
+		$.each(sectionOffset, function(index, section){
+			if (scrollPos >= section.postion) {
+				navbar.css("background-color", section.color);
+			}
+		}) 
+	});
+
+});</script>
+
+</body>
+</html>
