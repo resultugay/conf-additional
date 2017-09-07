@@ -18,40 +18,7 @@ from Decision import get_all_poster_decisions
 from Decision import get_all_reject_decisions
 from sqlalchemy.sql import func
 from Session import get_sessions
-from Abstract import Abstract
-from Abstract import birinci_gun_13_1
-from Abstract import birinci_gun_13_2
-from Abstract import birinci_gun_13_3
-from Abstract import birinci_gun_13_4
-from Abstract import birinci_gun_13_5
-from Abstract import birinci_gun_13_6
-from Abstract import birinci_gun_13_7
-from Abstract import birinci_gun_13_8
-from Abstract import ikinci_gun_9_1
-from Abstract import ikinci_gun_9_2
-from Abstract import ikinci_gun_9_3
-from Abstract import ikinci_gun_9_4
-from Abstract import ikinci_gun_9_5
-from Abstract import ikinci_gun_9_6
-from Abstract import ikinci_gun_9_7
-from Abstract import ikinci_gun_9_8
-from Abstract import ikinci_gun_11_1
-from Abstract import ikinci_gun_11_2
-from Abstract import ikinci_gun_11_3
-from Abstract import ikinci_gun_11_4
-from Abstract import ikinci_gun_11_5
-from Abstract import ikinci_gun_11_6
-from Abstract import ikinci_gun_11_7
-from Abstract import ikinci_gun_11_8
-from Abstract import ikinci_gun_14_1
-from Abstract import ikinci_gun_14_2
-from Abstract import ikinci_gun_14_3
-from Abstract import ikinci_gun_14_4
-from Abstract import ikinci_gun_14_5
-from Abstract import ikinci_gun_14_6
-from Abstract import ikinci_gun_14_7
-from Abstract import ikinci_gun_14_8
-
+from Abstract import *
 
 
 Base = declarative_base()    
@@ -221,6 +188,15 @@ def program_page():
         alti = birinci_gun_13_6() 
         yedi = birinci_gun_13_7() 
         sekiz = birinci_gun_13_8() 
+
+        bir_bir = birinci_gun_16_1()     
+        iki_bir = birinci_gun_16_2() 
+        uc_bir = birinci_gun_16_3() 
+        dort_bir = birinci_gun_16_4() 
+        bes_bir = birinci_gun_16_5() 
+        alti_bir = birinci_gun_16_6() 
+        yedi_bir = birinci_gun_16_7() 
+        sekiz_bir = birinci_gun_16_8()
         
         iki_bir_bir = ikinci_gun_9_1()     
         iki_bir_iki = ikinci_gun_9_2() 
@@ -275,4 +251,12 @@ def program_page():
             iki_uc_bes          =       iki_uc_bes    ,
             iki_uc_alti          =      iki_uc_alti   ,
             iki_uc_yedi          =      iki_uc_yedi   ,
-            iki_uc_sekiz          =     iki_uc_sekiz  ,)       
+            iki_uc_sekiz          =     iki_uc_sekiz  ,
+            bir_bir  = bir_bir,
+            iki_bir = iki_bir,
+            uc_bir = uc_bir,
+            dort_bir = dort_bir,
+            bes_bir = bes_bir,
+            alti_bir = alti_bir,
+            yedi_bir = yedi_bir,
+            sekiz_bir = sekiz_bir)       

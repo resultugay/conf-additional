@@ -89,6 +89,38 @@ def birinci_gun_13_8():
     abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 13:30 8.Salon%')).order_by("topic").all() if Abstract else None
     return abstracts
 
+
+def birinci_gun_16_1():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 1.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_2():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 2.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_3():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 3.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_4():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 4.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_5():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 5.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_6():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 6.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_7():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 7.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
+
+def birinci_gun_16_8():
+    abstracts = session.query(Abstract).filter(Abstract.color == '#00B050').filter(Abstract.session.like('1.gün 16:00 8.Salon%')).order_by("topic").all() if Abstract else None
+    return abstracts
     
     
     
